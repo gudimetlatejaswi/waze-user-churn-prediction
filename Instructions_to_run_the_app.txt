@@ -1,0 +1,5 @@
+Below are the steps on using Web Application after executing app.py file:
+1. Open the web application in a browser from the link generated.
+2. Fill in the input fields with relevant data. 
+3. Click the "Predict" button to see the churn prediction. 
+4. The result page will display whether the user is predicted as "Retained" or "Churned."

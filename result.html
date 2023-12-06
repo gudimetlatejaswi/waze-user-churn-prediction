@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Bootstrap CDN link -->
+    <style>
+        body {
+            background-image: url('static/images/main.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <!-- <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">Prediction Result</h1>
+                <p class="card-text">{{ prediction_text }}</p>
+                <a href="{{ url_for('home') }}" class="btn btn-primary">Go back to the home page</a>
+            </div>
+        </div>
+    </div> -->
+    <div class="container mt-5" style="position: relative;">
+        <div class="card" style="position: fixed; bottom: 0; left: 0; right: 0;">
+            <div class="card-body">
+                <h1 class="card-title">Prediction Result</h1>
+                <p class="card-text">{{ prediction_text }}</p>
+                <a href="{{ url_for('home') }}" class="btn btn-primary">Go back to the home page</a>
+            </div>
+        </div>
+    </div>
+    <!-- Add Bootstrap JS and Popper.js CDN links (required for Bootstrap functionality) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

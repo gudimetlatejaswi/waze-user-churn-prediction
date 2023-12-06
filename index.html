@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Bootstrap CDN link -->
+    <style>
+        body {
+            background-image: url('static/images/main.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Waze Dataset Prediction</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Waze Dataset Prediction</h1>
+        <form action="{{ url_for('predict') }}" method="post">
+            <div class="form-group">
+                <label for="drives">Drives:</label>
+                <input type="number" class="form-control" id="drives" name="drives" required>
+            </div>
+            <div class="form-group">
+                <label for="total_sessions">Total Sessions:</label>
+                <input type="number" class="form-control" id="total_sessions" name="total_sessions"  required>
+            </div>
+            <div class="form-group">
+                <label for="total_navigations_fav1">Total navigations 1:</label>
+                <input type="number" class="form-control" id="total_navigations_fav1" name="total_navigations_fav1" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="total_navigations_fav2">Total navigations 2:</label>
+                <input type="number" class="form-control" id="total_navigations_fav2" name="total_navigations_fav2" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="driven_km_drives">KM :</label>
+                <input type="number" class="form-control" id="driven_km_drives" name="driven_km_drives" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="duration_minutes_drives">Minutes :</label>
+                <input type="number" class="form-control" id="duration_minutes_drives" name="duration_minutes_drives" step="0.01" required>
+            </div>
+            <!-- Repeat similar input fields for other features -->
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+    </div>
+
+    <!-- Add Bootstrap JS and Popper.js CDN links (required for Bootstrap functionality) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
